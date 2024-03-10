@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'BR Sonoma';
+  /* src: url('../fonts/BR-Sonoma-Regular.otf') format('opentype'); */
+  src: url('./assets/br-sonoma-font-family/BRSonoma-Regular-BF654c45266c042.otf') format('opentype');
+}
+
 .App {
   text-align: center;
 }
