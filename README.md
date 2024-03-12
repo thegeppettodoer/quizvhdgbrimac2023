@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+# Proyecto realizado por VHDGarciaB
+12 Mar 2024
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
