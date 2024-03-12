@@ -316,6 +316,10 @@
     margin: 0 auto;
     padding-bottom: 8em;
     background-color: transparent;
+
+    width: 80%;
+    background-color: transparent;
+
   }
 
   .container::before {
@@ -424,18 +428,23 @@
     gap: 20px;
 
     padding-top: 4em;
+    background-color: transparent;
   }
   .main-left {
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
+    background-color: transparent;
+
   }
   .main-right {
     align-items: flex-start;
+    background-color: transparent;
+
   }
 
   .form-container {
-    margin: 0 auto;
+    margin: auto 2em;
     width: 352px;
     background-color: transparent;
   }
@@ -555,10 +564,12 @@
   }
 
   .footer-container {
-    padding-left: 10em;
-    padding-right: 10em;
+    // padding-left: 10em;
+    // padding-right: 10em;
+    margin:0 auto;
     flex-shrink: 0;
     max-width: 1200px;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
