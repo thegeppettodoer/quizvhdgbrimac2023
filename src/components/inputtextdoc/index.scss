@@ -5,32 +5,51 @@ $gray: #5e6488;
 $bordercolor: #5e6488;
 $colortext: #03050f;
 
-.grid-container-inp {
-  height: 56px;
+.grid-container {
   margin-top: 1em;
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0px;
   border-radius: 8px;
   background-color: white;
   padding: 0px !important;
+  height: 56px;
+
 }
 
-.column2-inp {
+.column1 {
+  height: 56px;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  display: flex;
+  padding-left: 8px;
+  background-color: white;
+  margin-bottom: 0px;
+  line-height: 0px;
+  padding: 0px !important;
+  border: 1px $bordercolor solid;
+}
+.column1:hover {
+  border: 2px black solid;
+}
+
+.column2 {
   height: 56px;
   background-color: white;
   align-items: center;
-  border-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
   border: 1px $bordercolor solid;
   display: flex;
   padding: 0;
 }
-.column2-inp:hover {
+.column2:hover {
   border: 2px black solid;
 }
 
-.form__group-inp {
+.form__group {
   background-color: transparent;
   position: relative;
   padding: 15px 0 0;
@@ -38,7 +57,7 @@ $colortext: #03050f;
   width: 100%;
 }
 
-.form__field-inp {
+.form__field {
   font-family: inherit;
   width: 100%;
   border: 0;
@@ -59,15 +78,15 @@ $colortext: #03050f;
     color: transparent;
   }
 
-  &:placeholder-shown ~ .form__label-inp {
+  &:placeholder-shown ~ .form__label {
     cursor: text;
     top: 20px;
   }
 }
-.form__field-inp :focus {
+.form__field :focus {
   border: 5px red solid;
 }
-.form__label-inp {
+.form__label {
   position: absolute;
   top: 0;
   display: block;
@@ -81,8 +100,8 @@ $colortext: #03050f;
   text-align: left;
 }
 
-.form__field-inp:focus {
-  ~ .form__label-inp {
+.form__field:focus {
+  ~ .form__label {
     position: absolute;
     top: 0;
     display: block;
@@ -100,7 +119,7 @@ $colortext: #03050f;
   border-image: linear-gradient(to right, $primary, $secondary);
   border-image-slice: 1;
 }
-.form__field-inp {
+.form__field {
   &:required,
   &:invalid {
     box-shadow: none;
@@ -122,7 +141,7 @@ $colortext: #03050f;
 //   background-color: white;
 // }
 
-.select-style-inp {
+.select-style {
   margin-top: 8px;
   height: 30px;
   font-family: BR Sonoma;
@@ -136,10 +155,11 @@ $colortext: #03050f;
   align-self: center;
   width: 100%;
   padding: 0px;
+  
 }
 
-.select-style-inp:hover,
-.select-style-inp:focus {
+.select-style:hover,
+.select-style:focus {
   border: none;
   outline: none !important;
 }

@@ -25,18 +25,13 @@ const InputText: React.FC<InputTextProps> = ({
 
   return (
     <div>
-      <div className="grid-container">
-        <div className="column1">
-           <select className="select-style">
-            <option value="dni">DNI</option>
-            <option value="carnet">Carnet Ext</option>
-          </select>
-        </div>
-        <div className="column2">
-          <div className="form__group field">
+      <div className="grid-container-inp">
+       
+        <div className="column2-inp">
+          <div className="form__group-inp field">
             <input
               type="text"
-              className="form__field"
+              className="form__field-inp"
               placeholder={placeholder}
               name={name}
               id={name}
@@ -44,7 +39,7 @@ const InputText: React.FC<InputTextProps> = ({
               value={value}
               onChange={handleChange}
             />
-            <label htmlFor={name} className="form__label">
+            <label htmlFor={name} className="form__label-inp">
               {placeholder}
             </label>
           </div>
