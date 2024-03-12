@@ -6,8 +6,7 @@
   .wrap-plans-big {
   }
 }
-// @media screen and (min-width: 1200px) {
-  .container-parent-plans {
+   .container-parent-plans {
     width: 100%;
     height: 100vh;
   }
@@ -23,16 +22,13 @@
   }
   .cardparent-resume {
     margin: 0 auto;
-    // border: 1px red solid;
     width: 90%;
     align-items: flex-start;
     text-align: left;
     background-color: transparent;
   }
   .text-title-resume {
-    // width: 544px;
     width: 80%;
-    // margin:0 auto;
     text-align: left;
     font-family: Lato;
     font-size: 40px;
@@ -44,7 +40,6 @@
     margin-top: 1em;
     background-color: transparent;
     @media screen and (max-width: 1200px) {
-      // width: 100%;
       margin-bottom: 16px;
       margin-top: 16px;
     }
@@ -76,4 +71,3 @@
     gap: 1em;
     background-color: transparent;
   }
-// }

@@ -1,24 +1,7 @@
 $background: #edeffc;
 $circleselected: #4f4fff;
 $circleunselected: #7981b2;
-
-// @media screen and (max-width: 1200px) {
-//   .progress {
-//     height: 56px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     background-color: transparent;
-//     padding: 0px 20px;
-//   }
-
-//   .progress-left {
-//     display: flex;
-//     align-items: center;
-//   }
-// }
-
-// @media screen and (min-width: 1200px) {
+ 
   .progress {
     height: 56px;
     display: flex;
@@ -95,4 +78,4 @@ $circleunselected: #7981b2;
     padding-left: 10px;
     align-items: center;
   }
-// }
+ 

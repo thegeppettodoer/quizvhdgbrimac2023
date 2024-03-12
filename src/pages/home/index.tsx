@@ -20,22 +20,20 @@ const Home: React.FC = () => {
   const [isChecked2, setIsChecked2] = useState(false);
 
   const handleCheckboxChange1 = () => {
-    setIsChecked1(!isChecked1); // Cambia el estado del checkbox
+    setIsChecked1(!isChecked1);  
   };
 
   const handleCheckboxChange2 = () => {
-    setIsChecked2(!isChecked2); // Cambia el estado del checkbox
+    setIsChecked2(!isChecked2);  
   };
 
   const handleInputChangeNumberDoc = (value: string, tipo: number) => {
-    // console.log("handleInputChangeNumberDoc:", value, tipo);
-
+ 
     setTipoDoc(tipo);
     setNroDoc(value);
   };
   const handleInputChangePhone = (value: string) => {
-    // console.log("handleInputChangePhone:", value);
-    setPhone(value);
+     setPhone(value);
   };
   const onClick = async (value: any) => {
     if (!isChecked1 && !isChecked2) return;
@@ -111,7 +109,7 @@ const Home: React.FC = () => {
                   <input
                     type="checkbox"
                     id="privacy-policy"
-                    checked={isChecked1} // Establece el estado del checkbox
+                    checked={isChecked1}  
                     onChange={handleCheckboxChange1}
                   />
                   <label htmlFor="privacy-policy">

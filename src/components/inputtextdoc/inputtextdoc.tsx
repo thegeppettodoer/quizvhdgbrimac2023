@@ -18,8 +18,7 @@ const InputTextDoc: React.FC<InputTextDocProps> = ({
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
     setSelectedOption(parseInt(selectedValue, 10));
-        // console.log("selectedValue:", selectedValue);
-  };
+   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;

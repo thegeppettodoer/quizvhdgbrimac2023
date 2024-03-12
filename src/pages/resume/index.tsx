@@ -11,7 +11,6 @@ import "./index.scss";
 
 const Resume: React.FC = () => {
   const { user, plans, addPlan, planSelected } = useAuth();
-  // console.log("user:", user);
   const [selected, setSelected] = useState(1);
   const [selectedBig, setSelectedBig] = useState(1);
   const [onePlan, setOnePlan] = useState(null);

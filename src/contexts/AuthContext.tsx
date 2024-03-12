@@ -40,8 +40,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [planSelected, setPlanSelected] = useState({});
   const [dataFromService, setDataFromService] = useState<ServiceData>();
-  // const [plansFromApi, setPlansFromApi] = useState<any>();
-  const [plansFromApi, setPlansFromApi] = useState<Plan[]>([]);
+   const [plansFromApi, setPlansFromApi] = useState<Plan[]>([]);
 
   const userService = new UserService();
 
@@ -68,8 +67,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const plansData = await plansService.getPlansData();
       if (plansData !== null) {
         setPlansFromApi(plansData.list);
-        // if (plansData.list !== null && plansData.list != undefined) {
-        // }
+       
 
         console.log("Datos del planes:", plansData);
         return plansData;
@@ -212,20 +210,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       plan: data["plan"]['plan'],
       name: user?.nombre,
     });
-    // const plansSele = plans.find((plan: any) => plan.id === data["group"]);
-    // if (plansSele != null && plansSele != undefined) {
-    //   const oneplanSele = plansSele["plans"].find(
-    //     (plan: any) => plan.id === data["plan"]
-    //   );
-    //   if (oneplanSele != null && oneplanSele != undefined) {
-
-    // setPlanSelected({
-    //   costo: oneplanSele["costo"],
-    //   plan: oneplanSele["plan"],
-    //   name: user?.nombre,
-    // });
-    //   }
-    // }
+     
   };
 
   return (

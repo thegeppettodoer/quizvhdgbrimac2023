@@ -3,7 +3,6 @@ import { useAuth } from "../../contexts/AuthContext";
 import Header from "../../components/header/header";
 import Progress from "../../components/progress/progress";
 import Goback from "../../components/goback/goback";
-// import { User } from "../../domain/models/User";
 import card1 from "../../assets/card1.svg";
 import card2 from "../../assets/card2.svg";
 import planCasa from "../../assets/plan-casa.svg";
@@ -24,7 +23,6 @@ const Plans: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // handleClick(1);
     console.warn("plansFromApi:", plansFromApi, user);
     return () => {};
   }, []);
@@ -32,7 +30,6 @@ const Plans: React.FC = () => {
   const handleClick = (e: number) => {
     // si es 1 es parami
     // si es 2 es para alguien mas
-    // const planIdOne = plans.find((plan: any) => plan.id === e);
     if (user != undefined) {
       const planIdOne = plansFromApi.filter(
         (plan: Plan) => plan.age >= user?.edad
@@ -44,7 +41,6 @@ const Plans: React.FC = () => {
   };
 
   const handleAddPlan = (data: any) => {
-    console.log('handleAddPlan:',data);
     if (onePlan != null) {
       addPlan({ group: selected, plan: data });
       navigate("/resume");
@@ -69,12 +65,8 @@ const Plans: React.FC = () => {
     );
   };
 
-  // const RenderOneCardPlans = ({ onplan }: { onplan: Plan[] | undefined }) => {
   const RenderOneCardPlans = ({ onplan }: { onplan: Plan[] | undefined }) => {
-    // const RenderOneCardPlans = ({ onplan }: { onplan: Plan[] }) => {
-    // console.log(">>>>", typeof onplan);
     if (onplan && Array.isArray(onplan)) {
-      // if (onplan != null && onplan !== undefined) {
       const maxPricePlan =
         onplan.length > 0 ? Math.max(...onplan.map((plan) => plan.price)) : 0;
       const planClinic = onplan.find((plan: Plan) =>
@@ -84,7 +76,6 @@ const Plans: React.FC = () => {
       if (planClinic != null && planClinic != undefined) {
         namePlanClinic = planClinic.name;
       }
-      console.log("RenderOneCardPlans:", maxPricePlan);
 
       return (
         <div className="wrap-plans-big">
@@ -93,9 +84,9 @@ const Plans: React.FC = () => {
               key={index}
               number={selected}
               title={e.name}
-              cardImage={namePlanClinic==e.name?planHospital:planCasa}
+              cardImage={namePlanClinic == e.name ? planHospital : planCasa}
               price={e.price}
-              handleClick={ handleAddPlan}
+              handleClick={handleAddPlan}
               isSelected={selectedBig === index}
               descriptions={e.description}
               highprice={e.price == maxPricePlan}

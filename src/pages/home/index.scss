@@ -42,62 +42,7 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
-  // .header {
-  //   height:56px;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   background-color: transparent;
-  //   padding: 0px 20px;
-  // }
-
-  // .header-left {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .logo img {
-  //   width: 100px;
-  //   height: auto;
-  // }
-
-  // .header-right {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .header-text {
-  //   display: none;
-
-  // }
-
-  // .phone-info {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .phone-link {
-  //   text-decoration: none;
-  //   color: inherit;
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .phone-ico {
-  //   width: 20px;
-  //   height: auto;
-  // }
-
-  // .phone-text {
-  //   margin-left: 5px;
-  //   font-family: BR Sonoma;
-  //   font-size: 16px;
-  //   font-weight: 700;
-  //   line-height: 20px;
-  //   letter-spacing: 0.4px;
-  //   text-align: right;
-  //   color: #03050f;
-  // }
+   
   .form-container {
     background-color: transparent;
   }
@@ -247,8 +192,7 @@
     margin-bottom: 1em;
   }
 
-  // .checkbox-container input[type="checkbox"] {
-  // }
+   
 
   .checkbox-container input[type="checkbox"]:checked {
     box-sizing: border-box;
@@ -397,67 +341,7 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
-  // .header {
-  //   height: 64px;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   background-color: transparent;
-  //   padding: 10px 20px; /* Ajusta el padding según sea necesario */
-  // }
-
-  // .header-left {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .logo img {
-  //   width: 100px;
-  //   height: auto;
-  // }
-
-  // .header-right {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .header-text {
-  //   margin-right: 10px;
-  //   font-family: BR Sonoma;
-  //   font-size: 12px;
-  //   font-weight: 600;
-  //   line-height: 16px;
-  //   letter-spacing: 0.2px;
-  //   text-align: right;
-  //   color: #03050f;
-  // }
-
-  // .phone-info {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .phone-link {
-  //   text-decoration: none;
-  //   color: inherit;
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // .phone-ico {
-  //   width: 20px;
-  //   height: auto;
-  // }
-
-  // .phone-text {
-  //   margin-left: 5px;
-  //   font-family: BR Sonoma;
-  //   font-size: 18px;
-  //   font-weight: 700;
-  //   line-height: 20px;
-  //   letter-spacing: 0.4px;
-  //   text-align: right;
-  // }
+   
   .form-container {
     margin-left: 25%;
     margin-right: 25%;
@@ -474,9 +358,7 @@
     display: block;
   }
 
-  // .o-nly-mobile {
-  //   display: none;
-  // }
+  
 
   .form-header {
     margin-top: 0.2em;
@@ -500,8 +382,7 @@
     color: #03050f;
   }
 
-  // .phone-info {
-  // }
+ 
   .phone-ico {
     margin-right: 5px;
   }
@@ -552,13 +433,11 @@
   }
   .main-right {
     align-items: flex-start;
-    // border: 1px red solid;
-  }
+   }
 
   .form-container {
     margin: 0 auto;
-    // border: 1px red solid;
-    width: 352px;
+     width: 352px;
     background-color: transparent;
   }
 
@@ -591,8 +470,7 @@
     margin-bottom: 1em;
   }
 
-  // .checkbox-container input[type="checkbox"] {
-  // }
+   
 
   .checkbox-container input[type="checkbox"]:checked {
     box-sizing: border-box;
@@ -674,7 +552,7 @@
     height: 8vh;
 
     background-color: black;
-    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    padding: 10px 20px;  
   }
 
   .footer-container {

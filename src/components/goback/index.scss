@@ -2,18 +2,7 @@ $background: #edeffc;
 $circleselected: #4f4fff;
 $circleunselected: #a9aab0;
 
-// @media screen and (max-width: 1200px) {
-//   .goback {
-//     height: 56px;
-//     display: flex;
-//     // justify-content: space-between;
-//     align-items: center;
-//     background-color: transparent;
-//     padding-left: 10em;
-//   }
-// }
-
-// @media screen and (min-width: 1200px) {
+ 
 .goback {
   height: 56px;
   display: flex;
@@ -34,4 +23,4 @@ $circleunselected: #a9aab0;
   height: 20px;
   margin-right: 10px;
 }
-// }
+ 
