@@ -13,7 +13,7 @@ interface AuthContextType {
   login: (userData: User) => Promise<boolean>;
   logout: () => void;
   plans: any;
-  plansFromApi: any;
+  plansFromApi: Plan[];
   planSelected: any;
   addPlan: (plan: any) => void;
 }
@@ -206,20 +206,26 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     //
   };
   const addPlan = (data: any) => {
-    const plansSele = plans.find((plan: any) => plan.id === data["group"]);
-    if (plansSele != null && plansSele != undefined) {
-      const oneplanSele = plansSele["plans"].find(
-        (plan: any) => plan.id === data["plan"]
-      );
-      if (oneplanSele != null && oneplanSele != undefined) {
-        console.log("addPlan:", oneplanSele);
-        setPlanSelected({
-          costo: oneplanSele["costo"],
-          plan: oneplanSele["plan"],
-          name: user?.nombre,
-        });
-      }
-    }
+    console.log("--addPlan:", data);
+    setPlanSelected({
+      costo: data["plan"]['price'],
+      plan: data["plan"]['plan'],
+      name: user?.nombre,
+    });
+    // const plansSele = plans.find((plan: any) => plan.id === data["group"]);
+    // if (plansSele != null && plansSele != undefined) {
+    //   const oneplanSele = plansSele["plans"].find(
+    //     (plan: any) => plan.id === data["plan"]
+    //   );
+    //   if (oneplanSele != null && oneplanSele != undefined) {
+
+    // setPlanSelected({
+    //   costo: oneplanSele["costo"],
+    //   plan: oneplanSele["plan"],
+    //   name: user?.nombre,
+    // });
+    //   }
+    // }
   };
 
   return (

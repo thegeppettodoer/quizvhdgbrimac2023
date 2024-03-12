@@ -6,37 +6,47 @@ import Goback from "../../components/goback/goback";
 // import { User } from "../../domain/models/User";
 import card1 from "../../assets/card1.svg";
 import card2 from "../../assets/card2.svg";
+import planCasa from "../../assets/plan-casa.svg";
+import planHospital from "../../assets/plan-hospital.svg";
 import { useNavigate } from "react-router-dom";
 
 import "./index.scss";
 import CardPlans from "../../components/cardplans/cardplans";
 import CardPlan from "../../components/cardplan/cardplan";
 import { Navigate } from "react-router-dom";
+import { Plan } from "../../domain/models/Plans";
 
 const Plans: React.FC = () => {
-  const { user, plans, addPlan , plansFromApi } = useAuth();
-  const [selected, setSelected] = useState(1);
-  const [selectedBig, setSelectedBig] = useState(1);
-  const [onePlan, setOnePlan] = useState(null);
+  const { user, plans, addPlan, plansFromApi } = useAuth();
+  const [selected, setSelected] = useState(0);
+  const [selectedBig, setSelectedBig] = useState(0);
+  const [onePlan, setOnePlan] = useState<Plan[]>();
   const navigate = useNavigate();
 
   useEffect(() => {
-    handleClick(1);
-    console.warn('plansFromApi:',plansFromApi, user);
+    // handleClick(1);
+    console.warn("plansFromApi:", plansFromApi, user);
     return () => {};
   }, []);
 
   const handleClick = (e: number) => {
-    const planIdOne = plans.find((plan: any) => plan.id === e);
-    setOnePlan(planIdOne);
-    setSelected(e);
-    return e;
+    // si es 1 es parami
+    // si es 2 es para alguien mas
+    // const planIdOne = plans.find((plan: any) => plan.id === e);
+    if (user != undefined) {
+      const planIdOne = plansFromApi.filter(
+        (plan: Plan) => plan.age >= user?.edad
+      );
+      setOnePlan(planIdOne);
+      setSelected(e);
+      return e;
+    }
   };
 
   const handleAddPlan = (data: any) => {
+    console.log('handleAddPlan:',data);
     if (onePlan != null) {
-      console.log("handleAddPlan:", onePlan["id"], "----", data);
-      addPlan({ group: onePlan["id"], plan: data });
+      addPlan({ group: selected, plan: data });
       navigate("/resume");
     }
   };
@@ -59,24 +69,36 @@ const Plans: React.FC = () => {
     );
   };
 
-  const RenderOneCardPlans = ({ onplan }: { onplan: any }) => {
+  // const RenderOneCardPlans = ({ onplan }: { onplan: Plan[] | undefined }) => {
+  const RenderOneCardPlans = ({ onplan }: { onplan: Plan[] | undefined }) => {
+    // const RenderOneCardPlans = ({ onplan }: { onplan: Plan[] }) => {
     // console.log(">>>>", typeof onplan);
-
-    if (onplan != null && onplan !== undefined) {
-      // console.log("RenderOneCardPlans:", onplan["plans"]);
+    if (onplan && Array.isArray(onplan)) {
+      // if (onplan != null && onplan !== undefined) {
+      const maxPricePlan =
+        onplan.length > 0 ? Math.max(...onplan.map((plan) => plan.price)) : 0;
+      const planClinic = onplan.find((plan: Plan) =>
+        plan.name.includes("Clínica")
+      );
+      let namePlanClinic = "";
+      if (planClinic != null && planClinic != undefined) {
+        namePlanClinic = planClinic.name;
+      }
+      console.log("RenderOneCardPlans:", maxPricePlan);
 
       return (
         <div className="wrap-plans-big">
-          {onplan["plans"].map((e: any) => (
+          {onplan.map((e: Plan, index: number) => (
             <CardPlan
-              key={e.id}
-              number={e.id}
-              title={e.text1}
-              description={e.text2}
-              cardImage={e.img}
-              handleClick={() => handleAddPlan(e.id)}
-              isSelected={selectedBig === e.id}
-              plan={e}
+              key={index}
+              number={selected}
+              title={e.name}
+              cardImage={namePlanClinic==e.name?planHospital:planCasa}
+              price={e.price}
+              handleClick={ handleAddPlan}
+              isSelected={selectedBig === index}
+              descriptions={e.description}
+              highprice={e.price == maxPricePlan}
             />
           ))}
         </div>

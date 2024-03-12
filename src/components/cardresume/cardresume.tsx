@@ -41,7 +41,7 @@ const CardResume: React.FC<CardResumeProps> = ({
         <div className="description-resume">{plan}</div>
         <div className="description-resume">
           {"Costo del Plan: "}
-          {costoPlan}
+          ${costoPlan} al mes
         </div>
       </div>
     </div>
