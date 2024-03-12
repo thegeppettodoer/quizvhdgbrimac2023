@@ -137,7 +137,10 @@ const Home: React.FC = () => {
             </div>
           </main>
         </div>
+
+
       </div>
+      
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-left">
@@ -150,6 +153,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </footer>
+      
     </div>
   );
 };
