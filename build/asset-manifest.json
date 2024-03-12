@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "http://localhost:8000/static/css/main.6c26cc23.css",
+    "main.js": "http://localhost:8000/static/js/main.901dbf40.js",
+    "static/js/453.0b96cbc5.chunk.js": "http://localhost:8000/static/js/453.0b96cbc5.chunk.js",
+    "static/media/background.png": "http://localhost:8000/static/media/background.a925951c0cb99c659d8f.png",
+    "static/media/back-right.png": "http://localhost:8000/static/media/back-right.b85f90a57e64be06c69d.png",
+    "static/media/back-left.png": "http://localhost:8000/static/media/back-left.66e24b750715ae25260b.png",
+    "static/media/Lato-Regular.ttf": "http://localhost:8000/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
+    "static/media/BRSonoma-Bold-BF654c4526823f5.otf": "http://localhost:8000/static/media/BRSonoma-Bold-BF654c4526823f5.1e01d9f1082fc8bbcfc4.otf",
+    "static/media/Lato-Bold.ttf": "http://localhost:8000/static/media/Lato-Bold.636be8de934918e38ed9.ttf",
+    "static/media/BRSonoma-Regular-BF654c45266c042.otf": "http://localhost:8000/static/media/BRSonoma-Regular-BF654c45266c042.653be03aaa3031d1db84.otf",
+    "static/media/card2.svg": "http://localhost:8000/static/media/card2.554beafb02babf77fecf000a6846c717.svg",
+    "static/media/logo-white.svg": "http://localhost:8000/static/media/logo-white.ae0bfc2e96b64bb819000107a242a03b.svg",
+    "static/media/card1.svg": "http://localhost:8000/static/media/card1.0e23ab16e35d053e6b2e4ece7b4664f8.svg",
+    "static/media/logo.svg": "http://localhost:8000/static/media/logo.6da6094b20e616a695645788b5edca92.svg",
+    "static/media/plan-casa.svg": "http://localhost:8000/static/media/plan-casa.b00b198ef90fb55a83df24e7fec4ed89.svg",
+    "static/media/phone.svg": "http://localhost:8000/static/media/phone.a02ce814cc3bed23d607b2fe6561527a.svg",
+    "static/media/plan-hospital.svg": "http://localhost:8000/static/media/plan-hospital.aff93b9fef0a3b1b44fe76a4b8a17350.svg",
+    "static/media/icono-family.svg": "http://localhost:8000/static/media/icono-family.7db3aed4ddf7b09267cf0cc0fca07a73.svg",
+    "index.html": "http://localhost:8000/index.html",
+    "static/media/goback.svg": "http://localhost:8000/static/media/goback.3d77fd54458e80463cc42cade66fd247.svg",
+    "main.6c26cc23.css.map": "http://localhost:8000/static/css/main.6c26cc23.css.map",
+    "main.901dbf40.js.map": "http://localhost:8000/static/js/main.901dbf40.js.map",
+    "453.0b96cbc5.chunk.js.map": "http://localhost:8000/static/js/453.0b96cbc5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c26cc23.css",
+    "static/js/main.901dbf40.js"
+  ]
+}

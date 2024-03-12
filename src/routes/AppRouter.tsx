@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/home";
 import Plans from "../pages/plans";
 import PrivateRoute from "../components/PrivateRoute";
@@ -11,7 +12,7 @@ const AppRouter: React.FC = () => {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/plans" element={<PrivateRoute Component={Plans} />} />
           <Route path="/resume" element={<PrivateRoute Component={Resume} />} />
         </Routes>

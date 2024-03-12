@@ -16,6 +16,17 @@ const Home: React.FC = () => {
   const [nroDoc, setNroDoc] = useState(String);
   const [phone, setPhone] = useState(String);
 
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+
+  const handleCheckboxChange1 = () => {
+    setIsChecked1(!isChecked1); // Cambia el estado del checkbox
+  };
+
+  const handleCheckboxChange2 = () => {
+    setIsChecked2(!isChecked2); // Cambia el estado del checkbox
+  };
+
   const handleInputChangeNumberDoc = (value: string, tipo: number) => {
     // console.log("handleInputChangeNumberDoc:", value, tipo);
 
@@ -27,6 +38,8 @@ const Home: React.FC = () => {
     setPhone(value);
   };
   const onClick = async (value: any) => {
+    if (!isChecked1 && !isChecked2) return;
+
     if (tipoDoc === 1 || tipoDoc === 2) {
       const userData: User = {
         tipoDoc: tipoDoc,
@@ -35,7 +48,7 @@ const Home: React.FC = () => {
         cumpleanos: "",
         apellido: "",
         nombre: "",
-        edad:0,
+        edad: 0,
       };
       const result = await login(userData);
       if (result) {
@@ -95,13 +108,23 @@ const Home: React.FC = () => {
                 />
 
                 <div className="checkbox-container">
-                  <input type="checkbox" id="privacy-policy" />
+                  <input
+                    type="checkbox"
+                    id="privacy-policy"
+                    checked={isChecked1} // Establece el estado del checkbox
+                    onChange={handleCheckboxChange1}
+                  />
                   <label htmlFor="privacy-policy">
                     Acepto la Política de privacidad
                   </label>
                 </div>
                 <div className="checkbox-container">
-                  <input type="checkbox" id="comercial-communications" />
+                  <input
+                    type="checkbox"
+                    id="comercial-communications"
+                    checked={isChecked2}
+                    onChange={handleCheckboxChange2}
+                  />
                   <label htmlFor="comercial-communications">
                     Acepto la política de comunicaciones comerciales
                   </label>
